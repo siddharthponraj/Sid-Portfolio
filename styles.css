@@ -557,6 +557,12 @@ footer {
 
 /* Fix Header for Mobile */
 @media (max-width: 768px) {
+    section {
+        padding: 60px 15px; /* Reduce padding for mobile */
+    }
+    .contact-container {
+        margin-top: -40px; /* Reduce spacing between sections */
+    }
     header {
         flex-direction: row;
         padding: 10px;
