@@ -1,0 +1,597 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #fff;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ffcc;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+
+/* Sections */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 50px;
+    text-align: left;
+}
+
+/* Home Container */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Text */
+.home-text {
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.home-text p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards 0.3s;
+    
+}
+
+/* Right Image */
+.home-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 280px; /* Adjust as needed */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3); /* Initial soft glow */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards 0.8s;
+    
+    /* Adding smooth transition */
+    transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.6); /* Stronger glow on hover */
+    transform: scale(1.05); /* Slightly enlarge the image */
+}
+
+.resume {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards 0.6s;
+}
+
+.resume:hover {
+    background-color: #009977;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section - Centered (No Background Blur) */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    position: relative;
+    color: #fff;
+    z-index: 2; /* Keeps content above particles */
+}
+
+.about-content {
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.9); /* Transparent dark box */
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.4);
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00ffcc;
+}
+
+.about-description, .about-details, .about-vision, .about-connect {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.about-description strong, .about-details strong, .about-vision strong, .about-connect strong {
+    color: #00ffcc;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keeps particles in the background */
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #121212;
+    background: #00ffcc;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* Projects */
+.my-projects {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ffcc;
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: fit-content; /* Adjusts width to fit the text */
+}
+.my-projects:hover{
+    text-shadow: 0 0 8px #00ffcc
+}
+
+/* Default short underline */
+.my-projects::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 30%; /* Short underline */
+    height: 2px;
+    background-color: #00ffcc;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%); /* Keeps it centered */
+}
+
+/* Hover effect - full underline */
+.my-projects:hover::after {
+    width: 100%;
+    box-shadow: 0 0 10px #00ffcc
+}
+
+.slider {
+    display: flex;
+    gap: 0px; /* Reduce the gap between slides */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+.slider-track {
+    display: flex;
+    gap: 5px; /* Reduce gap between slides */
+    transition: transform 0.5s ease-in-out;
+}   
+/* Project Cards */
+.project-card {
+    width: 300px; /* Adjust width */
+    height: 400px;
+    padding: 15px;
+    margin: 0 10px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly smaller */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: scale(1); /* Pops in */
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px; /* Adjust image height */
+    object-fit: cover; /* Ensures image fits well */
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #00ffcc;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    flex-grow: 1; /* Allows text to take up available space */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Prevents text from exceeding */
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 12px 16px; /* Reduced padding to make it shorter */
+    background: #00ffcc;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px; /* Makes it oval */
+    font-size: 13px; /* Slightly smaller font */
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    width: 150px;
+    align-self: center;
+}
+
+/* Hover Effect */
+.project-card a:hover {
+    background: #00cca3;
+    transform: scale(1.05);
+}
+
+/* Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00ffcc;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3);
+}
+
+/* Left Arrow */
+#prev {
+    left: 10px;
+}
+
+/* Right Arrow */
+#next {
+    right: 10px;
+}
+
+/* Hover Effect on Arrows */
+.arrow:hover {
+    background: #00ffcc;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 255, 204, 0.5);
+}
+
+/* Contact Section */
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+/* Profile Picture */
+.profile-pic {
+    
+    width: 173px;  
+    height: 300px;  
+    border-radius: 10%;
+    object-fit: contain;  
+    object-position: center; /* Ensures the image is centered properly */
+    border: 4px solid #00ffcc;  
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);  
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);    
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+
+/* Social Media Icons */
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #00ffcc;
+    font-size: 24px;
+    margin-right: 3px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover {
+    color: #00ffcc;
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+.contact-right {
+    max-width: 400px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Send Button */
+.send-btn {
+    width: 40%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00ffcc;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.send-btn:hover {
+    background-color: #009977;
+    transform: scale(1.05);
+}
+
+/* Form Inputs */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Textarea */
+textarea {
+    height: 120px;
+    resize: none;
+    background: #222;
+}
+.name, .email{
+    background: #222;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #000;
+    text-align: center;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
+    .home-text, .home-image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .profile-img {
+        max-width: 250px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+#statusMessage {
+    display: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.success {
+    color: #155724;
+}
+
+.error {
+    color: #721c24;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+/* Full-screen particles effect */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
