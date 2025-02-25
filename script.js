@@ -121,3 +121,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showCards(); // Initial pop-in effect on page load
 });
+function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+}
+document.addEventListener("DOMContentLoaded", function () {
+    let slider = document.querySelector(".slider-track");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Only apply swipe functionality in mobile view
+    function enableSwipe() {
+        if (window.innerWidth <= 768) {
+            slider.addEventListener("touchstart", (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener("touchmove", (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2; 
+                slider.scrollLeft = scrollLeft - walk;
+            });
+
+            slider.addEventListener("touchend", () => {
+                isDown = false;
+            });
+
+            // Reset Opacity for all cards
+            document.querySelectorAll(".project-card").forEach((card) => {
+                card.style.opacity = "1"; // Ensures full visibility
+            });
+        }
+    }
+
+    enableSwipe();
+});
+
