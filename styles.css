@@ -422,6 +422,38 @@ section {
     padding: 50px;
     flex-wrap: wrap;
 }
+.my-contacts {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ffcc;
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: fit-content; /* Adjusts width to fit the text */
+}
+.my-contacts:hover{
+    text-shadow: 0 0 8px #00ffcc
+}
+
+/* Default short underline */
+.my-contacts::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 30%; /* Short underline */
+    height: 2px;
+    background-color: #00ffcc;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%); /* Keeps it centered */
+}
+
+/* Hover effect - full underline */
+.my-contacts:hover::after {
+    width: 100%;
+    box-shadow: 0 0 10px #00ffcc
+}
 
 /* Profile Picture */
 .profile-pic {
@@ -589,6 +621,7 @@ footer {
 
     .profile-img:hover {
         transform: scale(1.1);
+        
     }
 
     .home-text {
@@ -596,41 +629,6 @@ footer {
     }
 }
     
-
-/* Fix "My Projects" Title */
-.my-projects {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #00ffcc;
-    position: relative;
-    display: block;
-    margin: 20px auto;
-    width: fit-content; /* Adjusts width to fit the text */
-}
-
-.my-projects:hover {
-    text-shadow: 0 0 8px #00ffcc;
-}
-
-/* Default short underline */
-.my-projects::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    width: 30%; /* Short underline */
-    height: 2px;
-    background-color: #00ffcc;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    transform: translateX(-50%); /* Keeps it centered */
-}
-
-/* Hover effect - full underline */
-.my-projects:hover::after {
-    width: 100%;
-    box-shadow: 0 0 10px #00ffcc;
-}
 
 /* Fix Project Card Layout */
 @media (max-width: 768px) {
@@ -645,6 +643,8 @@ footer {
     }
 
     .slider-track {
+        position: relative;
+
         display: flex;
         gap: 10px;
         overflow-x: auto;
@@ -661,18 +661,28 @@ footer {
     }
 
     .project-card {
+        position: relative;
         width: 80%; /* Takes full width */
         min-width: 80%;
         margin: 0 auto;
         scroll-snap-align: center;
         opacity: 1 !important;  /* Ensures full opacity on mobile */
         transform: none !important; /* Prevents scaling/shifting */
+        z-index: 1; 
     }
+    
 
     /* Hide Navigation Arrows in Mobile */
     #prev, #next {
         display: none;
     }
+    .my-contacts{
+        margin-bottom: 5px;
+    }
+    .social-links{
+        padding-bottom: 3%;
+    }
+
 }
 
 
@@ -683,7 +693,7 @@ footer {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
 
