@@ -122,13 +122,36 @@ document.addEventListener("DOMContentLoaded", function () {
     showCards(); // Initial pop-in effect on page load
 });
 function toggleMenu() {
-    document.querySelector("nav ul").classList.toggle("active");
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+
+    // Add event listener to each link to close the menu when clicked
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach((link) => {
+        link.addEventListener("click", function() {
+            menu.classList.remove("active"); // Close the menu
+        });
+    });
 }
 document.addEventListener("DOMContentLoaded", function () {
     let slider = document.querySelector(".slider-track");
     let isDown = false;
     let startX;
     let scrollLeft;
+
+    // Function to manage opacity dynamically based on swipe position
+    function adjustCardOpacity() {
+        const cards = document.querySelectorAll(".project-card");
+        const sliderWidth = slider.offsetWidth;
+        const scrollPosition = slider.scrollLeft;
+        
+        cards.forEach((card, index) => {
+            const cardOffset = card.offsetLeft;
+            const distanceFromCenter = Math.abs(cardOffset - scrollPosition);
+            const opacityValue = Math.max(1 - (distanceFromCenter / sliderWidth), 0.5); // Adjust opacity based on distance
+            card.style.opacity = opacityValue;
+        });
+    }
 
     // Only apply swipe functionality in mobile view
     function enableSwipe() {
@@ -145,19 +168,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 const x = e.touches[0].pageX - slider.offsetLeft;
                 const walk = (x - startX) * 2; 
                 slider.scrollLeft = scrollLeft - walk;
+                adjustCardOpacity(); // Adjust opacity during swipe
             });
 
             slider.addEventListener("touchend", () => {
                 isDown = false;
-            });
-
-            // Reset Opacity for all cards
-            document.querySelectorAll(".project-card").forEach((card) => {
-                card.style.opacity = "1"; // Ensures full visibility
+                adjustCardOpacity(); // Adjust opacity after swipe ends
             });
         }
     }
 
     enableSwipe();
 });
+
 
