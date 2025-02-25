@@ -36,7 +36,11 @@ nav ul {
     display: flex;
     gap: 25px;
 }
-
+.hamburger {
+    display: none; /* Hide in PC view */
+    font-size: 30px;
+    cursor: pointer;
+}
 nav ul li {
     display: inline-block;
     position: relative;
@@ -107,6 +111,7 @@ section {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    text-align: left;
 }
 
 /* Left Text */
@@ -135,10 +140,10 @@ section {
 
 /* Right Image */
 .home-image {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 50px;
 }
 
 .profile-img {
@@ -150,7 +155,6 @@ section {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s ease-out forwards 0.8s;
-    
     /* Adding smooth transition */
     transition: box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -304,7 +308,7 @@ section {
 }
 .slider-track {
     display: flex;
-    gap: 5px; /* Reduce gap between slides */
+    gap: 10px; /* Reduce gap between slides */
     transition: transform 0.5s ease-in-out;
 }   
 /* Project Cards */
@@ -519,73 +523,159 @@ footer {
     text-align: center;
 }
 
-/* Responsive Fix for Smaller Screens */
+/* Fix Header for Mobile */
 @media (max-width: 768px) {
-    #home {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
+    header {
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
     }
 
-    .home-container {
-        flex-direction: column;
-    }
-
-    .home-text, .home-image {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .profile-img {
-        max-width: 250px;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 480px) {
     .logo {
         font-size: 20px;
     }
 
-    nav a {
-        font-size: 16px;
+    nav ul {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.3);
+
     }
 
-    .btn {
-        font-size: 14px;
-        padding: 8px 16px;
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #00ffcc;
+    }
+    .home-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px; /* Adds space between image and text */
+    }
+
+    .home-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-img {
+        width: 180px; /* Adjust size as needed */
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #00ffcc;
+        box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-img:hover {
+        transform: scale(1.1);
+    }
+
+    .home-text {
+        max-width: 100%; /* Ensures text is centered */
     }
 }
+    
 
-#statusMessage {
-    display: none;
+/* Fix "My Projects" Title */
+.my-projects {
     text-align: center;
-    font-size: 16px;
+    font-size: 28px;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+    color: #00ffcc;
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: fit-content; /* Adjusts width to fit the text */
 }
 
-.success {
-    color: #155724;
+.my-projects:hover {
+    text-shadow: 0 0 8px #00ffcc;
 }
 
-.error {
-    color: #721c24;
-    animation: shake 0.3s ease-in-out;
+/* Default short underline */
+.my-projects::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 30%; /* Short underline */
+    height: 2px;
+    background-color: #00ffcc;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%); /* Keeps it centered */
 }
 
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+/* Hover effect - full underline */
+.my-projects:hover::after {
+    width: 100%;
+    box-shadow: 0 0 10px #00ffcc;
 }
+
+/* Fix Project Card Layout */
+@media (max-width: 768px) {
+    .my-projects{
+        margin-bottom: 50px;
+    }
+    .slider {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Hide scrollbar */
+        -ms-overflow-style: none;
+        width: 100%; /* Ensure full width */
+
+    }
+
+    .slider-track::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit */
+    }
+
+    .project-card {
+        width: 80%; /* Takes full width */
+        min-width: 80%;
+        margin: 0 auto;
+        scroll-snap-align: center;
+        opacity: 1 !important;  /* Ensures full opacity on mobile */
+        transform: none !important; /* Prevents scaling/shifting */
+    }
+
+    /* Hide Navigation Arrows in Mobile */
+    #prev, #next {
+        display: none;
+    }
+}
+
+
 /* Full-screen particles effect */
 #particles-js {
     position: fixed;
@@ -595,3 +685,5 @@ footer {
     left: 0;
     z-index: -1;
 }
+
+
