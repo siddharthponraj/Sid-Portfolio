@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siddharth's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Particles.js Library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <!-- Particle Effect for Full Page -->
+    <!-- Particle Effect -->
     <div id="particles-js"></div>
 
     <!-- Header Section -->
@@ -30,144 +28,135 @@
         </nav>
     </header>
 
-<!-- Home Section -->
-<section id="home">
-    <div class="home-container">
-        <div class="home-text">
-            <h1>Hi, I'm <span class="highlight">Siddharth</span></h1>
-            <p>Developer | Tech Enthusiast</p>
-            <a href="assets\Resume.pdf" target="_blank" class="resume">Resume</a>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h1>Hi, I'm <span class="highlight">Siddharth</span></h1>
+                <p>Developer | Tech Enthusiast</p>
+                <a href="assets\Resume.pdf" target="_blank" class="resume">Resume</a>
+            </div>
+            <div class="home-image">
+                <img src="assets/info-perfil.png" alt="Siddharth" class="profile-img">
+            </div>
         </div>
-        <div class="home-image">
-            <img src="assets/info-perfil.png" alt="Siddharth" class="profile-img">
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p class="about-description">
+                Hi, I'm <strong>Siddharth</strong>, Developer, and Tech Enthusiast with a passion for building 
+                innovative solutions. My expertise spans across <strong>AI, Web Development, and Software Engineering</strong>, 
+                where I create cutting-edge projects that solve real-world problems.
+            </p>
+            <p class="about-details">
+                 <strong>What I Do:</strong>  
+                - AI-Powered Applications for various domains.  
+                - Building modern, user-friendly web and mobile apps.  
+            </p>
+            <p class="about-vision">
+                 <strong>My Vision:</strong>  
+                I aim to leverage technology to <strong>empower communities, enhance user experiences, and drive innovation</strong>.  
+            </p>
+            <p class="about-connect">
+                 <strong>Let's Connect:</strong>  
+                I'm always open to collaborations, discussions, and new opportunities.
+            </p>
         </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about">
-    <div class="about-content">
-        <h2>About Me</h2>
-        <p class="about-description">
-            Hi, I'm <strong>Siddharth</strong>, Developer, and Tech Enthusiast with a passion for building 
-            innovative solutions. My expertise spans across <strong>AI, Web Development, and Software Engineering</strong>, 
-            where I create cutting-edge projects that solve real-world problems.
-        </p>
-        <p class="about-details">
-             <strong>What I Do:</strong>  
-            - AI-Powered Applications for various domains.  
-            - Building modern, user-friendly web and mobile apps.  
-        </p>
-        <p class="about-vision">
-             <strong>My Vision:</strong>  
-            I aim to leverage technology to <strong>empower communities, enhance user experiences, and drive innovation</strong>.  
-        </p>
-        <p class="about-connect">
-             <strong>Let’s Connect:</strong>  
-            I’m always open to collaborations, discussions, and new opportunities.
-        </p>
-    </div>
-</section>
-
+    </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="my-projects-container"></div>
+        <div class="my-projects-container">
             <h2 class="my-projects">My Projects</h2> 
         </div>
-        <div class="slider">
-            <button id="prev" class="arrow"><</button>
+        
+        <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/plant_disease.png" alt="AI - Powered Plant Disease Recognition">
+                        <h3>AI - Powered Plant Disease Recognition</h3>
+                        <p>AI-Powered Plant Disease Recognition detects plant diseases from images and provides instant diagnosis with treatment recommendations in multiple languages.</p>
+                        <a href="https://github.com/siddharthponraj/AI-powered-plant-disease-recognition-using-CNN.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/mental_health.png" alt="Flutter Mental Health App">
+                        <h3>Flutter Mental Health App</h3>
+                        <p>Interactive mobile apps designed for mental well-being. Provides engaging activities and therapeutic exercises. Supports emotional regulation.</p>
+                        <a href="https://github.com/siddharthponraj/Path-to-peace.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/compiler.avif" alt="AI-Powered Code Compiler">
+                        <h3>AI-Powered Code Compiler</h3>
+                        <p>Developed a smart compiler with real-time syntax correction using Gemini AI. Supports multiple programming languages with logic suggestions as comments. Built using Flutter for a seamless mobile coding experience.</p>
+                        <a href="https://github.com/siddharthponraj/AI-Mobile-Compiler" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/frontend.png" alt="Frontend Projects">
+                        <h3>Frontend Projects</h3>
+                        <p>A collection of creative and responsive web designs. Showcases UI/UX skills using modern web technologies. Features interactive components.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/forest_fire.png" alt="Forest Fire Prediction">
+                        <h3>Forest Fire Prediction</h3>
+                        <p>Uses AI to detect and predict forest fire risks. Analyzes environmental factors to prevent disasters. Enhances early warning systems.</p>
+                        <a href="https://github.com/siddharthponraj/Forest-fire-prediction.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
             
-        <div class="slider-track">
-            <div class="project-card">
-                <img src="assets\images\plant_disease.png" alt="AI - Powered Plant Disease Recognition">
-                <h3>AI - Powered Plant Disease Recognition</h3>
-                <p>AI-Powered Plant Disease Recognition detects plant diseases from images and provides instant diagnosis with treatment recommendations in multiple languages. 
-                    Integrated with an AI chatbot, it offers real-time agricultural assistance.</p>
-                <a href="https://github.com/siddharthponraj/AI-powered-plant-disease-recognition-using-CNN.git" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="assets/images/mental_health.png" alt="Flutter Mental Health App">
-                <h3>Flutter Mental Health App</h3>
-                <p>Interactive mobile apps designed for mental well-being.
-                    Provides engaging activities and therapeutic exercises.
-                    Supports emotional regulation and cognitive development.</p>
-                <a href="https://github.com/siddharthponraj/Path-to-peace.git" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <img src="assets/images/frontend.png" alt="Frontend Projects">
-                <h3>Frontend Projects</h3>
-                <p>A collection of creative and responsive web designs.
-                    Showcases UI/UX skills using modern web technologies.
-                    Features interactive components and animations.</p>
-            </div>
-            <div class="project-card">
-                <img src="assets/images/forest_fire.png" alt="Forest Fire Prediction">
-                <h3>Forest Fire Prediction</h3>
-                <p>Uses AI to detect and predict forest fire risks.
-                    Analyzes environmental factors to prevent disasters.
-                    Aims to enhance early warning systems for safety.</p>
-                <a href="https://github.com/siddharthponraj/Forest-fire-prediction.git" target="_blank">View Project</a>
-            </div>
-        </div>
-            <button id="next" class="arrow">></button>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
-    
-    
 
     <!-- Contact Section -->
-<section id="contact">
-    <h2 class="my-projects">Contacts</h2>
-    <div class="contact-container">
-        <!-- Left Side (Profile & Social Links) -->
-        <div class="contact-left">
-            <img src="assets\info-perfil2.png" alt="My Picture" class="profile-pic">
-            <div class="social-links">
-                <a href="https://github.com/siddharthponraj" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/siddharth-p-91670a251/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/siddhu_0407_?igsh=aHhpcTl3NTh6Nm81" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/919487613673" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <section id="contact">
+        <h2 class="my-contacts">Contacts</h2>
+        <div class="contact-container">
+            <div class="contact-left">
+                <img src="assets/info-perfil.png" alt="My Picture" class="profile-pic">
+                <div class="social-links">
+                    <a href="https://github.com/siddharthponraj" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/siddharth-p-91670a251/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/siddhu_0407_?igsh=aHhpcTl3NTh6Nm81" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919487613673" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="send-btn">Send Message</button>
+                    <p id="statusMessage"></p>
+                </form>
             </div>
         </div>
-
-        <!-- Right Side (Contact Form) -->
-        <div class="contact-right">
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="send-btn">Send Message</button>
-                <p id="statusMessage"></p>
-            </form>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <p>© 2025 Siddharth. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        window.onload = function() {
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-                    "color": { "value": "#ffffff" },
-                    "shape": { "type": "circle" },
-                    "opacity": { "value": 0.5 },
-                    "size": { "value": 3 },
-                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff" },
-                    "move": { "enable": true, "speed": 3 }
-                },
-                "interactivity": {
-                    "events": { "onhover": { "enable": true, "mode": "grab" } }
-                }
-            });
-        };
-    </script>   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
- 
+    <script src="script.js"></script>
 </body>
 </html>
