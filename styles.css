@@ -533,32 +533,67 @@ footer {
     }
 
     nav ul {
-        position: fixed;
-        top: 60px;
-        right: -100%;
-        width: 80%;
-        height: calc(100vh - 60px);
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        width: 200px;
         background: rgba(0, 0, 0, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 255, 204, 0.3);
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 30px;
-        transition: right 0.3s ease;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        transform: scale(0.9);
+        transform-origin: top right;
+        opacity: 0;
+        visibility: hidden;
+        border: 1px solid #00ffcc;
     }
 
     nav ul.active {
-        right: 0;
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
     }
 
     nav ul li {
-        margin: 15px 0;
+        margin: 0;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        transition: background 0.2s ease;
+    }
+
+    nav ul li:hover {
+        background: rgba(0, 255, 204, 0.1);
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 0;
+        display: block;
     }
 
     .hamburger {
         display: block;
         z-index: 1001;
+        cursor: pointer;
+        padding: 10px;
     }
 
+    /* Add a small arrow indicator */
+    nav ul::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid rgba(0, 0, 0, 0.95);
+    }
     /* Home Section */
     #home {
         padding-top: 80px;
