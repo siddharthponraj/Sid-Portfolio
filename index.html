@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+</head>
+<body>
+    <!-- Particle Effect -->
+    <div id="particles-js"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="logo">Welcome</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h1>Hi, I'm <span class="highlight">Siddharth</span></h1>
+                <p>Software Developer | AI Engineer</p>
+                <a href="assets\Resume.pdf" target="_blank" class="resume">Resume</a>
+            </div>
+            <div class="home-image">
+                <img src="assets/info-perfil.png" alt="Siddharth" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <h2>About Me</h2>
+        
+        <div class="about-cards">
+            <!-- Main Profile Card -->
+            <div class="about-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card-timeline">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">PROFILE</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Software Developer & AI Engineer</h3>
+                    <div class="company">Siddharth P</div>
+                    <div class="card-description">
+                        <p>Hi, I'm <strong>Siddharth</strong>, a passionate Software Developer and Tech Enthusiast with expertise in building innovative solutions across <strong>AI, Web Development, and Software Engineering</strong>. I create cutting-edge projects that solve real-world problems and drive technological innovation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Do Card -->
+            <div class="about-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="card-timeline">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">EXPERTISE</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>What I Do</h3>
+                    <div class="company">Core Competencies</div>
+                    <div class="card-description">
+                        <ul>
+                            <li>Develop <strong>AI-Powered Applications</strong> for various domains including healthcare, agriculture, and education</li>
+                            <li>Build modern, user-friendly <strong>web and mobile applications</strong> using cutting-edge technologies</li>
+                            <li>Design and implement <strong>scalable software solutions</strong> with robust architecture</li>
+                            <li>Integrate <strong>machine learning models</strong> into production-ready applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="about-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="card-timeline">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">VISION</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>My Vision</h3>
+                    <div class="company">Future Goals</div>
+                    <div class="card-description">
+                        <p>I aim to leverage technology to <strong>empower communities, enhance user experiences, and drive innovation</strong>. My mission is to create solutions that not only solve technical challenges but also make a positive impact on society and improve people's lives through technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connect Card -->
+            <div class="about-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="card-timeline">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">CONNECT</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Let's Connect</h3>
+                    <div class="company">Collaboration Opportunities</div>
+                    <div class="card-description">
+                        <p>I'm always open to <strong>collaborations, technical discussions, and new opportunities</strong>. Whether you have an exciting project idea, want to discuss technology trends, or are looking for a passionate developer to join your team, I'd love to hear from you.</p>
+                        <div class="connect-tags">
+                            <span class="connect-tag">Open Source</span>
+                            <span class="connect-tag">Freelance</span>
+                            <span class="connect-tag">Full-time</span>
+                            <span class="connect-tag">Mentorship</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="skills-container">
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <!-- Core Development -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Core Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span>Java</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span>Gemini AI Integration</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-header">
+                                <span>TensorFlow</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="82">
+                            <div class="skill-header">
+                                <span>Computer Vision</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile & Web Development -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile & Web</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-header">
+                                <span>Flutter & Dart</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-header">
+                                <span>HTML/CSS</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-header">
+                                <span>FastAPI</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-header">
+                                <span>PostgreSQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="83">
+                            <div class="skill-header">
+                                <span>Git & GitHub</span>
+                                <span class="skill-percentage">83%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="88">
+                            <div class="skill-header">
+                                <span>Figma</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!--Experience section-->
+    <section id="experience">
+        <div class="experience-container">
+            <h2>Professional Journey</h2>
+            
+            <div class="journey-cards">
+                <!-- Work Experience -->
+                <div class="journey-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="card-timeline">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-date">MAY 2024 - JUNE 2024</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>UI/UX Design Intern</h3>
+                        <div class="company">Graphic Design Internship</div>
+                        <div class="card-description">
+                            <p>Designed and prototyped user-friendly interfaces for web and mobile applications, collaborating with development teams to ensure seamless implementation.</p>
+                            <ul>
+                                <li>Created wireframes and interactive prototypes using Figma</li>
+                                <li>Conducted user research and usability testing</li>
+                                <li>Improved application navigation and accessibility standards</li>
+                                <li>Developed brand assets and marketing materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="journey-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-timeline">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-date">2022 - 2026</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bachelor of Technology</h3>
+                        <div class="company">Kalasalingam Academy of Research and Education</div>
+                        <div class="card-description">
+                            <div class="achievement">
+                                <span class="achievement-label">Current CGPA:</span>
+                                <span class="achievement-value">8.42/10</span>
+                            </div>
+                            <div class="coursework">
+                                <strong>Relevant Coursework:</strong>
+                                <div class="course-tags">
+                                    <span class="course-tag">Data Structures & Algorithms</span>
+                                    <span class="course-tag">Machine Learning</span>
+                                    <span class="course-tag">Artificial Intelligence</span>
+                                    <span class="course-tag">Database Management</span>
+                                    <span class="course-tag">Operating Systems</span>
+                                    <span class="course-tag">Computer Networks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="card-timeline">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-date">2020 - 2022</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Higher Secondary Education</h3>
+                        <div class="company">Edustar International School</div>
+                        <div class="card-description">
+                            <div class="achievement">
+                                <span class="achievement-label">Percentage:</span>
+                                <span class="achievement-value">75.5%</span>
+                            </div>
+                            <p>Focus on Biology and Mathematics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="card-timeline">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-date">2020</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Secondary Education </h3>
+                        <div class="company">Edustar International School</div>
+                        <div class="card-description">
+                            <div class="achievement">
+                                <span class="achievement-label">Percentage:</span>
+                                <span class="achievement-value">77.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="my-projects-container">
+            <h2 class="my-projects">My Projects</h2> 
+        </div>
+        
+        <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/plant_disease.png" alt="AI - Powered Plant Disease Recognition">
+                        <h3>AI - Powered Plant Disease Recognition</h3>
+                        <p>AI-Powered Plant Disease Recognition detects plant diseases from images and provides instant diagnosis with treatment recommendations in multiple languages.</p>
+                        <a href="https://github.com/siddharthponraj/AI-powered-plant-disease-recognition-using-CNN.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/mental_health.png" alt="Flutter Mental Health App">
+                        <h3>Flutter Mental Health App</h3>
+                        <p>Interactive mobile apps designed for mental well-being. Provides engaging activities and therapeutic exercises. Supports emotional regulation.</p>
+                        <a href="https://github.com/siddharthponraj/Path-to-peace.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/compiler.avif" alt="AI-Powered Code Compiler">
+                        <h3>AI-Powered Code Compiler</h3>
+                        <p>Developed a smart compiler with real-time syntax correction using Gemini AI. Supports multiple programming languages with logic suggestions as comments. Built using Flutter for a seamless mobile coding experience.</p>
+                        <a href="https://github.com/siddharthponraj/AI-Mobile-Compiler" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/frontend.png" alt="Frontend Projects">
+                        <h3>Frontend Projects</h3>
+                        <p>A collection of creative and responsive web designs. Showcases UI/UX skills using modern web technologies. Features interactive components.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="project-card">
+                        <img src="assets/images/forest_fire.png" alt="Forest Fire Prediction">
+                        <h3>Forest Fire Prediction</h3>
+                        <p>Uses AI to detect and predict forest fire risks. Analyzes environmental factors to prevent disasters. Enhances early warning systems.</p>
+                        <a href="https://github.com/siddharthponraj/Forest-fire-prediction.git" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+<!-- Contact Section - Single Screen -->
+<section id="contact">
+    <div class="contact-container">
+        <h2 class="contact-heading">Get In Touch</h2>
+        
+        <div class="contact-content-compact">
+            <div class="contact-main-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="card-timeline">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">CONTACT</div>
+                    </div>
+                </div>
+                
+                <div class="contact-card-content">
+                    <!-- Left Side - Profile & Info -->
+                    <div class="contact-left-compact">
+                        <div class="profile-section-compact">
+                            <img src="assets/info-perfil.png" alt="Siddharth" class="profile-pic-compact">
+                            <div class="profile-info">
+                                <h3>Siddharth P</h3>
+                                <p>Software Developer & AI Engineer</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-details-compact">
+                            <div class="contact-item-compact">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">siddharthponraj@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item-compact">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+91 9443319673</span>
+                                </div>
+                            </div>
+                            <div class="contact-item-compact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Available for Remote Work</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links-compact">
+                            <a href="https://github.com/siddharthponraj" target="_blank" class="social-link-compact">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/siddharth-p-91670a251/" target="_blank" class="social-link-compact">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/siddhu_0407_?igsh=aHhpcTl3NTh6Nm81" target="_blank" class="social-link-compact">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/919487613673" target="_blank" class="social-link-compact">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side - Contact Form -->
+                    <div class="contact-right-compact">
+                        <div class="form-intro">
+                            <h4>Send me a message</h4>
+                            <p>Let's discuss your project or opportunity</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form-compact">
+                            <div class="form-group-compact">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group-compact">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group-compact">
+                                <textarea id="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="send-btn-compact">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <p id="statusMessage" class="status-message-compact"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
