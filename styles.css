@@ -243,6 +243,110 @@ section {
         transform: translateY(0);
     }
 }
+/* Bottom Right Arrow Indicator */
+.scroll-arrow-bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.2s;
+}
+
+.scroll-hint {
+    color: #00ffcc;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+.arrow-down {
+    position: relative;
+    width: 30px;
+    height: 40px;
+}
+
+.arrow-down span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background: #00ffcc;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    animation: arrowScroll 2s infinite;
+}
+
+.arrow-down span::before,
+.arrow-down span::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 2px;
+    height: 12px;
+    background: #00ffcc;
+    border-radius: 2px;
+}
+
+.arrow-down span::before {
+    left: -4px;
+    transform: rotate(-45deg);
+}
+
+.arrow-down span::after {
+    right: -4px;
+    transform: rotate(45deg);
+}
+
+@keyframes arrowScroll {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+        opacity: 0.3;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .scroll-arrow-bottom-right {
+        bottom: 25px;
+        right: 25px;
+        gap: 12px;
+    }
+    
+    .scroll-hint {
+        font-size: 0.7em;
+        letter-spacing: 2px;
+    }
+    
+    .arrow-down {
+        width: 25px;
+        height: 35px;
+    }
+    
+    .arrow-down span {
+        height: 25px;
+    }
+    
+    .arrow-down span::before,
+    .arrow-down span::after {
+        height: 10px;
+        bottom: -6px;
+    }
+}
 /* About Section - Same style as Experience */
 #about {
     padding: 100px 20px;
