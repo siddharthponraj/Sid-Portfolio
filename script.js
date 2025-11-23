@@ -425,6 +425,27 @@ function handleResize() {
         }
     }
 }
+// Animate Certification Cards
+function animateCertificationCards() {
+    const certificationCards = document.querySelectorAll('.certification-card');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 150);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    certificationCards.forEach(card => {
+        observer.observe(card);
+    });
+}
 
 // Main Initialization Function
 document.addEventListener("DOMContentLoaded", function() {
@@ -436,6 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
     animateSkills();
     animateJourneyCards();
     animateAboutCards();
+    animateCertificationCards();
     setupNavigationScroll();
     setupActiveNavigation();
     setupSmoothScrolling();
