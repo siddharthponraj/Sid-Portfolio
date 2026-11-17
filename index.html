@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Siddharth P — Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Siddharth P, full stack developer at Hexaennea Technologies. JavaScript, React, Node.js, TypeScript, C# and .NET, MySQL and application security." />
+    <meta name="theme-color" content="#f4f3ef" />
+    <script>
+      // Apply the theme before first paint (same rule as src/theme.tsx) to avoid a flash.
+      (function () {
+        var t;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <meta property="og:title" content="Siddharth P — Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Full stack developer at Hexaennea Technologies. JavaScript, React, Node.js, C# and .NET, MySQL and application security." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+Tamil:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
